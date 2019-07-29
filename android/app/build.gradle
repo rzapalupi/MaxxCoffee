@@ -188,8 +188,14 @@ android {
 }
 
 dependencies {
+    implementation project(':react-native-gesture-handler')
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.facebook.react:react-native:+"  // From node_modules
+
+    implementation 'com.facebook.fresco:fresco:1.+'
+
+    // For animated GIF support
+    implementation 'com.facebook.fresco:animated-gif:1.+'
 
     if (enableHermes) {
       def hermesPath = "../../node_modules/hermesvm/android/";
